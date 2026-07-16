@@ -1,31 +1,34 @@
 #!/usr/bin/env python3
 """
-Topic: Write to Standard Error (stderr)
+Topic: Write to Standard Output (stdout)
 
-Demonstrates writing error/diagnostic messages to stderr instead of stdout,
-which is the correct practice for errors and warnings in CLI tools.
+Shows different ways of writing to standard output: print(), sys.stdout.write(),
+and flushing output manually.
 
 Usage:
-    python write_stderr.py
-    python write_stderr.py 2> errors.log   (redirect only stderr to a file)
+    python write_stdout.py
 
 Expected Output:
-    A normal message on stdout, and a warning/error message on stderr.
-    If you redirect stderr (2>), only the stdout message appears on screen.
+    Several lines demonstrating different stdout writing techniques.
 """
 
 import sys
+import time
 
 
 def main() -> None:
-    print("This is a normal informational message (stdout).")
+    print("Using print():", "this is the simplest way to write to stdout.")
 
-    print("Warning: this is a non-fatal warning message (stderr).", file=sys.stderr)
+    sys.stdout.write("Using sys.stdout.write(): this also writes to stdout.\n")
 
-    try:
-        1 / 0
-    except ZeroDivisionError as e:
-        print(f"Error: {e} (stderr)", file=sys.stderr)
+    print("Writing without newline...", end="")
+    sys.stdout.flush()
+    time.sleep(0.5)
+    print(" done (flushed manually before continuing).")
+
+    for i in range(3):
+        print(f"Streaming value: {i}", flush=True)
+        time.sleep(0.2)
 
 
 if __name__ == "__main__":
