@@ -85,14 +85,14 @@ Every script is designed to be practical, well-documented, and production-orient
 - Data Serialization & Transformation
 
 #### Input & Output Handling
-1. **Accept Input from a File:** Read data streams or contents directly from a specified file path.
-2. **Accept Input from a Pipe:** Handle data piped from another process's standard output.
-3. **Capture and Process Command Output:** Execute a command and store its stdout/stderr for analysis.
-4. **Redirect Input/Output Streams:** Programmatically change the source or destination of standard streams.
-5. **Read from Standard Input (stdin):** Collect user input typed directly into the terminal session.
-6. **Write to Standard Output (stdout):** Display information to the user via the terminal.
-7. **Write to Standard Error (stderr):** Output error messages distinctly from standard output.
-8. **Read Multiline Input:** Capture text input spanning multiple lines until an EOF marker.
+1. [**Accept Input from a File:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20&%20Output%20Handling/scripts/input_from_file.py) Read data streams or contents directly from a specified file path.
+2. [**Accept Input from a Pipe:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/input_from_pipe.py) Handle data piped from another process's standard output.
+3. [**Capture and Process Command Output:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/capture_command_output.py) Execute a command and store its stdout/stderr for analysis.
+4. [**Redirect Input/Output Streams:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/redirect_streams.py) Programmatically change the source or destination of standard streams.
+5. [**Read from Standard Input (stdin):**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_stdin.py) Collect user input typed directly into the terminal session.
+6. [**Write to Standard Output (stdout):**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20&%20Output%20Handling/scripts/write_stdout.py) Display information to the user via the terminal.
+7. [**Write to Standard Error (stderr):**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/write_stderr.py) Output error messages distinctly from standard output.
+8. [**Read Multiline Input:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_multiline_input.py) Capture text input spanning multiple lines until an EOF marker.
 9. **Handle Command-Line Arguments:** Access basic script parameters passed via `sys.argv`.
 10. **Parse Command-Line Options using argparse:** Build complex, user-friendly command-line interfaces.
 11. **Parse Command-Line Options using click:** Create beautiful CLI tools with composable commands.
