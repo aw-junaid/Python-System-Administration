@@ -1,0 +1,27 @@
+# requirements.txt
+# Input & Output Handling - Python Automation Scripts
+#
+# Install all dependencies with:
+#   pip install -r requirements.txt
+#
+# ---------------------------------------------------------------------------
+# CAUTION / SOURCE NOTICE
+# ---------------------------------------------------------------------------
+# These scripts are part of the "Input & Output Handling" module of the
+# Python-System-Administration repository:
+#
+#   https://github.com/aw-junaid/Python-System-Administration/tree/main/modules/Input%20&%20Output%20Handling/scripts/
+#
+# Review any script BEFORE running it, especially if you downloaded it from
+# a link rather than writing it yourself. Only run automation scripts from
+# sources you trust, in an environment (virtualenv/container) you don't mind
+# experimenting in. Some scripts here create sample files (txt, json, csv,
+# yaml, xml, toml, zip) in the current working directory - check the folder
+# you run them from.
+# ---------------------------------------------------------------------------
+
+click>=8.1.7
+PyYAML>=6.0.1
+tqdm>=4.66.1
+colorama>=0.4.6
+toml>=0.10.2 ; python_version < "3.11"
