@@ -1,0 +1,22 @@
+# requirements.txt
+# ------------------------------------------------------------
+# External dependencies for the Task Scheduling scripts.
+#
+# Scripts using ONLY Python's standard library need NOTHING installed:
+#   - windows_task_scheduler.py   (wraps the built-in 'schtasks' command, Windows only)
+#   - execute_periodically.py
+#   - execute_at_specific_time.py
+#   - retry_failed_task.py
+#   - queue_background_jobs.py
+#
+# Scripts that need an external package:
+#   - schedule_with_library.py   -> requires 'schedule'
+#   - schedule_with_cron.py      -> requires 'python-crontab' (Linux/macOS only)
+#
+# Install with:
+#   pip install -r requirements.txt
+# ------------------------------------------------------------
+
+schedule>=1.2.0
+python-crontab>=3.0.0
+croniter>=2.0.0
