@@ -1,0 +1,44 @@
+# requirements.txt
+# ------------------------------------------------------------
+# External dependencies for the Cloud & DevOps Automation scripts.
+#
+# Install ONLY what you need — most people won't use every script here.
+# Each script's docstring lists exactly what it requires.
+#
+#   pip install -r requirements.txt   installs everything (heavier).
+#   pip install boto3                 installs just what aws_automation.py needs.
+#
+# ------------------------------------------------------------
+# Script -> Package mapping:
+#
+#   aws_automation.py            -> boto3
+#   azure_automation.py          -> azure-identity, azure-mgmt-compute, azure-storage-blob
+#   gcp_automation.py            -> google-cloud-compute, google-cloud-storage
+#   docker_automation.py         -> docker
+#   docker_compose_automation.py -> pyyaml
+#   kubernetes_automation.py     -> kubernetes
+#   terraform_execution.py       -> (none — wraps the 'terraform' CLI, installed separately)
+#   ansible_integration.py       -> (none — wraps the 'ansible'/'ansible-playbook' CLI;
+#                                     install Ansible itself with: pip install ansible)
+#   git_automation.py            -> GitPython
+#   github_api_automation.py     -> PyGithub
+#   gitlab_api_automation.py     -> python-gitlab
+#   cicd_automation.py           -> pyyaml
+#   serverless_deploy.py         -> boto3 (for AWS Lambda); Azure path needs the
+#                                     'func' CLI (Azure Functions Core Tools),
+#                                     installed separately via npm
+# ------------------------------------------------------------
+
+boto3>=1.34.0
+azure-identity>=1.15.0
+azure-mgmt-compute>=30.0.0
+azure-storage-blob>=12.19.0
+google-cloud-compute>=1.15.0
+google-cloud-storage>=2.14.0
+docker>=7.0.0
+pyyaml>=6.0.1
+kubernetes>=29.0.0
+GitPython>=3.1.42
+PyGithub>=2.2.0
+python-gitlab>=4.4.0
+ansible>=9.0.0
