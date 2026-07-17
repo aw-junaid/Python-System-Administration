@@ -1,0 +1,12 @@
+# Automation Best Practices Scripts — dependencies
+#
+# Install everything with:
+#   pip install -r requirements.txt
+#
+# Most scripts use ONLY the Python standard library and need nothing
+# from this file. Only these need extra packages:
+
+PyYAML>=6.0              # configuration_management.py (optional — has a fallback parser)
+python-dotenv>=1.0.0     # secure_credential_handling.py (optional — for loading a local .env file)
+pytest>=7.0.0            # testing_automation_scripts.py (to run the pytest test cases)
+sphinx>=7.0.0            # documentation_generation.py (optional — to actually build the HTML docs)
