@@ -1,0 +1,16 @@
+# Report Generation Scripts — dependencies
+#
+# Install everything with:
+#   pip install -r requirements.txt
+#
+# Some scripts (generate_csv_report.py, generate_json_report.py,
+# generate_xml_report.py, generate_markdown_report.py) use ONLY the
+# Python standard library and need nothing from this file.
+
+reportlab>=4.0.0        # generate_pdf_report.py
+openpyxl>=3.1.0         # generate_excel_report.py
+matplotlib>=3.7.0       # generate_charts.py
+plotly>=5.20.0          # generate_dashboard.py
+dash>=2.16.0            # generate_dashboard.py
+pandas>=2.0.0           # generate_dashboard.py
+asciichartpy>=1.5.25    # generate_inline_graph.py (optional — has a stdlib fallback)
