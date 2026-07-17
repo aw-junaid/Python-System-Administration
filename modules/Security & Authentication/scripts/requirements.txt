@@ -1,0 +1,30 @@
+# requirements.txt
+# ------------------------------------------------------------
+# External dependencies for the Security & Authentication scripts.
+#
+# Scripts using ONLY Python's standard library (getpass, hashlib, hmac,
+# secrets, base64, json, os) need NOTHING installed:
+#   - handle_password_input.py
+#   - use_getpass.py
+#   - reprompt_password.py
+#   - hash_passwords.py
+#   - verify_password_hash.py
+#   - generate_random_password.py
+#   - generate_secure_token.py
+#   - verify_file_integrity.py
+#   - generate_checksums.py
+#
+# Scripts that need the 'cryptography' package:
+#   - encrypt_sensitive_data.py
+#   - decrypt_sensitive_data.py
+#   - generate_ssh_keys.py
+#   - read_ssh_keys.py
+#   - manage_api_keys.py
+#   - validate_certificate.py
+#   - secure_credential_storage.py
+#
+# Install with:
+#   pip install -r requirements.txt
+# ------------------------------------------------------------
+
+cryptography>=42.0.0
