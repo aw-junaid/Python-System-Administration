@@ -1,0 +1,12 @@
+# Python dependencies for the Certificate & Key Management scripts
+# Install with:
+#   pip install -r requirements.txt
+#
+# Some scripts also depend on external system binaries that CANNOT be
+# installed via pip - see README.md "System (non-Python) Dependencies"
+# section before running: gpg, certbot, puttygen.
+
+cryptography>=42.0.0
+python-gnupg>=0.5.2
+requests>=2.31.0
+hvac>=2.1.0
