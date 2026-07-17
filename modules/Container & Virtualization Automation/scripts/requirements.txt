@@ -1,0 +1,25 @@
+# Container & Virtualization Automation - Python dependencies
+#
+# Install everything with:
+#     pip install -r requirements.txt
+#
+# NOTE: Some packages here also require a system-level dependency to be
+# installed and RUNNING on your machine before the Python package will work.
+# See README.md for the full breakdown of which script needs what.
+
+# --- Docker scripts (docker_*.py) ---
+docker==7.1.0                # Docker SDK for Python; requires Docker Engine/Desktop running
+python-on-whales==0.72.0     # Wraps the `docker compose` CLI for docker_compose_orchestration.py
+
+# --- Virtual machine scripts (vm_*.py) ---
+libvirt-python==10.5.0       # Requires libvirt/KVM installed on a Linux host (system package: libvirt-dev)
+
+# --- Vagrant script (vagrant_manage.py) ---
+python-vagrant==1.0.0        # Requires the `vagrant` CLI installed and on PATH
+
+# --- LXC/LXD script (lxc_manage.py) ---
+pylxd==2.3.3                 # Requires LXD installed and initialized (`lxd init`)
+
+# --- Kubernetes scripts (k8s_*.py) ---
+kubernetes==30.1.0           # Requires a reachable cluster and a valid ~/.kube/config
+PyYAML==6.0.2                # Used to parse Deployment manifest YAML files
