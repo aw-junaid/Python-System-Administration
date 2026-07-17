@@ -1,0 +1,24 @@
+# Data Serialization & Transformation - scripts/requirements.txt
+#
+# Install everything with:
+#     pip install -r requirements.txt
+#
+# Notes:
+# - A few scripts (base64_codec.py, url_codec.py, encoding_convert.py,
+#   csv_to_xml.py, xml_to_csv.py, jq_query.py, json_serialize.py,
+#   json_deserialize.py, json_to_csv.py, csv_to_json.py,
+#   pickle_serialize.py, flatten_json.py) use ONLY the Python standard
+#   library and need nothing from this file.
+# - toml_to_json.py uses the built-in `tomllib` module on Python 3.11+;
+#   the `toml` package below is only needed as a fallback on Python < 3.11.
+# - Every script that needs a third-party package checks for it at
+#   startup and prints a clear "pip install -r requirements.txt"
+#   message instead of crashing if it is missing.
+
+PyYAML>=6.0            # json_to_yaml.py, yaml_to_json.py, ini_to_json_yaml.py, merge_configs.py
+xmltodict>=0.13         # xml_to_json.py, json_to_xml.py
+msgpack>=1.0            # msgpack_serialize.py
+jsonschema>=4.0         # validate_json_schema.py
+lxml>=4.9                # xslt_transform.py
+ijson>=3.2               # stream_large_dataset.py
+toml>=0.10               # toml_to_json.py fallback on Python < 3.11
