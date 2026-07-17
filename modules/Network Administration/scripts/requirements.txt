@@ -1,0 +1,30 @@
+# Python dependencies for the Network Administration scripts
+# Install with: pip install -r requirements.txt
+
+# Required by resolve_dns.py (DNS record lookups)
+dnspython>=2.6.0
+
+# Required by ssh_automation.py, scp_transfer.py, and sftp_automation.py
+# (SSH/SCP/SFTP client functionality)
+paramiko>=3.4.0
+
+# -----------------------------------------------------------------------
+# SCRIPTS THAT NEED NO EXTRA PACKAGES (standard library only):
+#   ping_hosts.py, scan_ports.py, check_host_availability.py,
+#   whois_lookup.py, get_public_ip.py, get_local_ip.py,
+#   test_connectivity.py, ftp_download.py, ftp_upload.py,
+#   configure_firewall.py
+# -----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
+# NOTE ON EXTERNAL (NON-PYTHON) TOOLS
+# -----------------------------------------------------------------------
+# ping_hosts.py and check_host_availability.py call the system `ping`
+# command, which must already be installed (it ships by default with
+# Windows, Linux, and macOS, but is sometimes missing from minimal/
+# container-based Linux images -- install with e.g. `apt install
+# iputils-ping` if needed).
+#
+# configure_firewall.py calls `iptables` (Linux) or `netsh` (Windows),
+# which are OS-native tools, not Python packages, and cannot be
+# installed via pip.
