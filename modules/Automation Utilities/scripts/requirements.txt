@@ -1,0 +1,20 @@
+# Most of these scripts use ONLY the Python standard library
+# (functools, threading, multiprocessing, asyncio, queue, dataclasses,
+# typing, tempfile, shutil, itertools, time, json) -- nothing to install
+# for: retry_failed_operations, timeout_execution, progress_indicator,
+# spinner_animation, retry_decorator, rate_limiting, parallel_execution,
+# threading_utils, multiprocessing_utils, async_utils, config_validation,
+# auto_cleanup, retry_backoff.
+#
+# The following two scripts have ONE optional dependency each. Both
+# scripts detect if it's missing and automatically fall back to an
+# in-process/in-memory demo mode with a printed warning -- so nothing
+# breaks if you skip this install, but you need it for real/production use:
+
+redis>=5.0.0   # required for job_queue.py (real Redis-backed queue)
+               # and for the Redis-backed cache path in cache_results.py
+
+# You also need an actual Redis SERVER running and reachable for those
+# two scripts to use real Redis instead of their fallback, e.g.:
+#   docker run -p 6379:6379 redis
+# or install locally: https://redis.io/docs/getting-started/installation/
