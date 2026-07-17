@@ -1,0 +1,30 @@
+# requirements.txt
+# ------------------------------------------------------------
+# External Python dependencies for the User & Permission Management scripts.
+#
+# ALL scripts in this module use ONLY Python's standard library
+# (os, sys, grp, pwd, stat, subprocess, argparse, getpass, platform).
+# There is NOTHING to install via pip for any script here.
+#
+#   pip install -r requirements.txt
+#
+# will install nothing (this file is intentionally empty of packages) —
+# it exists so the module follows the same structure as the other
+# modules in this repository.
+#
+# ------------------------------------------------------------
+# OS-level (non-Python) tools required by specific scripts:
+#
+#   - manage_acl.py requires the 'acl' package installed at the OS level
+#     (provides the 'setfacl' and 'getfacl' commands):
+#       Debian/Ubuntu: sudo apt install acl
+#       RHEL/CentOS:   sudo yum install acl
+#
+#   - create_user.py, delete_user.py, modify_user.py, change_password.py,
+#     and manage_groups.py rely on standard Linux user-management tools
+#     (useradd, userdel, usermod, chpasswd, chage, groupadd, groupdel,
+#     gpasswd) which are pre-installed on virtually all Linux distributions.
+#
+#   - On Windows, create_user.py, delete_user.py, and change_password.py
+#     use the built-in 'net user' command — nothing extra to install.
+# ------------------------------------------------------------
