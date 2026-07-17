@@ -424,29 +424,117 @@ Every script is designed to be practical, well-documented, and production-orient
 297. **Performance Optimization:** Profile scripts with `cProfile` to remove bottlenecks.
 298. **Documentation Generation:** Auto-build documentation from docstrings using Sphinx.
 
+
+**Container & Virtualization Automation**
+
+299. **Build Docker Images Programmatically:** Create container images from code using the Docker SDK without manually running docker build commands.
+300. **Run Docker Containers:** Launch and manage container lifecycle with custom ports, volumes, and environment variables via Python.
+301. **Manage Docker Volumes:** Programmatically create, attach, and remove persistent storage volumes for containerized applications.
+302. **Manage Docker Networks:** Set up isolated or shared networks to control communication between containers and external services.
+303. **Docker Compose Orchestration:** Define multi-service applications in code and control their entire lifecycle programmatically.
+304. **Prune Unused Docker Resources:** Automatically clean up dangling images, stopped containers, and orphaned volumes to free disk space.
+305. **Monitor Container Logs:** Stream and filter real-time log output from running containers for debugging and monitoring.
+306. **Execute Commands Inside Containers:** Run shell commands directly inside a running container's filesystem for administration tasks.
+307. **Pull/Push Docker Images to Registries:** Authenticate and transfer images to or from Docker Hub, ECR, or private registries.
+308. **Create Virtual Machines (libvirt/VirtualBox):** Provision complete VMs with specified CPU, RAM, and disk configurations through hypervisor APIs.
+309. **Clone Virtual Machines:** Duplicate entire VM instances including all disks and settings for rapid environment replication.
+310. **Snapshot Virtual Machines:** Capture point-in-time VM states that can be restored later for testing or rollback scenarios.
+311. **Manage Vagrant Environments:** Control Vagrant boxes programmatically to spin up, provision, halt, or destroy development environments.
+312. **LXC/LXD Container Management:** Manage lightweight system containers that provide full OS environments with near-native performance.
+313. **Kubernetes Pod Management:** Create, monitor, and terminate pods within Kubernetes clusters using the official Python client.
+314. **Deploy to Kubernetes Clusters:** Apply deployment manifests and rollout updates to applications running on Kubernetes.
+315. **Helm Chart Automation:** Package and deploy applications to Kubernetes using Helm charts managed through Python scripting.
+316. **Container Health Checks:** Define and verify container readiness and liveness probes to ensure services are operational.
+317. **Resource Limit Enforcement on Containers:** Set CPU and memory constraints on containers to prevent resource starvation across services.
+
+**Certificate & Key Management**
+
+318. **Generate Self-Signed Certificates:** Create X.509 certificates signed with their own private key for internal testing or development.
+319. **Create Certificate Signing Requests (CSR):** Generate CSRs to submit to a Certificate Authority for obtaining trusted SSL/TLS certificates.
+320. **Sign Certificates with a CA:** Act as an internal Certificate Authority to sign and issue certificates for internal infrastructure.
+321. **Convert Certificate Formats (PEM, DER, PFX):** Transform certificates between different encoding formats required by various systems.
+322. **Extract Certificate Information:** Parse and retrieve subject, issuer, validity dates, and fingerprints from certificate files.
+323. **Check Certificate Expiration Dates:** Monitor certificate expiry to trigger alerts before services become untrusted due to expired certs.
+324. **Monitor Certificates for Expiry:** Continuously watch certificate validity windows and send notifications when renewal is approaching.
+325. **Automate Certificate Renewal:** Programmatically renew and deploy certificates before they expire to prevent service interruptions.
+326. **Manage Let's Encrypt Certificates:** Automate ACME protocol interactions to obtain and renew free trusted TLS certificates.
+327. **Generate SSH Key Pairs:** Create RSA, ECDSA, or Ed25519 key pairs for secure remote access and authentication.
+328. **Convert SSH Key Formats:** Transform keys between OpenSSH, PEM, and PPK formats for compatibility across different tools.
+329. **Manage GPG Keys:** Generate, import, export, and revoke GPG keys for signing and encrypting files or communications.
+330. **Sign Files with GPG:** Digitally sign files to prove authenticity and integrity using GNU Privacy Guard keys.
+331. **Verify GPG Signatures:** Confirm that signed files have not been tampered with and originate from trusted sources.
+332. **Rotate Encryption Keys:** Implement periodic key rotation policies to limit exposure from compromised credentials over time.
+333. **Secure Private Key Storage:** Store and retrieve private keys from hardware security modules, vaults, or encrypted keystores.
+334. **Revoke Compromised Certificates:** Issue Certificate Revocation Lists (CRLs) or update OCSP responders when keys are compromised.
+335. **Build Internal PKI Infrastructure:** Establish a complete private Public Key Infrastructure with root and intermediate CAs for enterprise use.
+336. **Distribute Public Keys Securely:** Publish and share public keys through trusted channels to enable secure communication across systems.
+
+**Data Serialization & Transformation**
+
+337. **Serialize Python Objects to JSON:** Convert dictionaries, lists, and custom objects into JSON strings for storage or API transmission.
+338. **Deserialize JSON to Python Objects:** Parse JSON strings back into native Python data structures for processing.
+339. **Convert JSON to CSV:** Flatten hierarchical JSON data into flat CSV rows suitable for spreadsheet analysis.
+340. **Convert CSV to JSON:** Transform tabular CSV data into nested or array-based JSON structures for API consumption.
+341. **Convert JSON to YAML:** Translate JSON data into human-readable YAML format for configuration files.
+342. **Convert YAML to JSON:** Parse YAML configuration files and output equivalent JSON for web service compatibility.
+343. **Convert XML to JSON:** Extract structured data from XML documents and represent it as JSON objects.
+344. **Convert JSON to XML:** Build XML documents from JSON data structures with configurable element naming.
+345. **Convert CSV to XML:** Transform tabular spreadsheet data into hierarchical XML markup for legacy system integration.
+346. **Convert XML to CSV:** Flatten XML document data into row-based CSV format for analysis and reporting.
+347. **Parse and Transform with jq-style Queries:** Apply powerful filtering and transformation expressions to JSON data programmatically.
+348. **Convert INI to JSON/YAML:** Migrate legacy INI configuration files into modern structured formats.
+349. **Convert TOML to JSON:** Transform Python package configuration files into widely compatible JSON format.
+350. **Binary Serialization with Pickle:** Serialize complex Python objects into binary format for caching or inter-process communication.
+351. **Binary Serialization with MessagePack:** Pack data into compact binary format that is cross-language compatible and faster than JSON.
+352. **Base64 Encode/Decode Data:** Encode binary data as ASCII text for safe transport in text-based protocols and storage.
+353. **URL Encode/Decode Data:** Percent-encode special characters in URLs and decode them back for safe web transmission.
+354. **Convert Between Character Encodings:** Transcode text between UTF-8, Latin-1, ASCII, and other character sets without data loss.
+355. **Flatten Nested JSON Structures:** Transform deeply nested JSON objects into flat key-value pairs for database insertion or CSV export.
+356. **Merge JSON/YAML Data Sources:** Combine multiple configuration files or data sources with deep merge strategies and conflict resolution.
+357. **Validate JSON Against JSON Schema:** Verify that JSON data conforms to defined schemas with type checking and constraint validation.
+358. **Transform XML with XSLT:** Apply XSLT stylesheets to XML documents for complex structural transformations and formatting.
+359. **Stream Large Datasets Without Loading into Memory:** Process massive JSON, CSV, or XML files incrementally using iterative parsers to avoid RAM exhaustion.
+
+
 ## Who is this Repository For?
 
-- Python Developers
-- System Administrators
-- Linux Administrators
-- Windows Administrators
-- DevOps Engineers
-- Cloud Engineers
-- Site Reliability Engineers (SRE)
-- Network Engineers
-- IT Professionals
-- Students & Beginners
+This repository is designed for anyone who wants to automate system administration tasks using Python — from complete beginners to experienced engineers looking for ready-to-use scripts and best-practice patterns.
+
+- **Python Developers** — looking to apply Python to real-world sysadmin, infrastructure, and automation tasks beyond typical application development.
+- **System Administrators** — who want to replace manual, repetitive tasks (backups, log management, monitoring, reporting) with reliable, reusable scripts.
+- **Linux Administrators** — managing servers, services, cron jobs, and file systems who want Python-based alternatives or companions to shell scripting.
+- **Windows Administrators** — automating Windows Server tasks, scheduled jobs, and system monitoring with cross-platform Python code.
+- **DevOps Engineers** — building CI/CD pipelines, infrastructure automation, and deployment tooling that needs to be maintainable, tested, and production-ready.
+- **Cloud Engineers** — automating cloud resource management, provisioning, and reporting across AWS, Azure, GCP, and hybrid environments.
+- **Site Reliability Engineers (SRE)** — implementing monitoring, alerting, incident response tooling, and reliability-focused automation with proper logging, retries, and error handling.
+- **Network Engineers** — automating network device configuration, monitoring, and reporting tasks using Python.
+- **IT Professionals** — in any role who need practical, copy-and-adapt scripts for day-to-day operational tasks.
+- **Students & Beginners** — learning Python by studying real, working automation examples with clear documentation, expected outputs, and best-practice explanations rather than toy exercises.
+
+Each module includes standalone, well-documented scripts, a `README.md` explaining how to install and run them, and a `requirements.txt` listing exact dependencies — so you can jump straight to the topic you need, regardless of your experience level.
 
 ---
 
 
-
-
-> [!IMPORTANT]
-> Every example is designed to demonstrate Python automation techniques that can be adapted for Linux, Windows, macOS, cloud platforms, containers, networking, and enterprise infrastructure.
-
-
-
-## License
-
-This project is licensed under the MIT License.
+## ☕ Support the Project
+ 
+If this repository has helped you, consider supporting its continued development:
+ 
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/awjunaid)
+ 
+Other ways to support:
+- ⭐ Star this repository
+- 🐛 Report bugs or suggest features via [Issues](https://github.com/aw-junaid/Python-System-Administration/issues)
+- 🔀 Submit a Pull Request with your own automation scripts
+- 📢 Share this repo with your network
+---
+ 
+## 📄 License
+ 
+This project is licensed under the **MIT License** — you are free to use, modify, and distribute this code, including for commercial purposes, provided the original copyright notice is retained.
+ 
+---
+ 
+<p align="center">
+  Made with ❤️ and 🐍 by <a href="https://awjunaid.com/">aw-junaid</a>
+</p>
