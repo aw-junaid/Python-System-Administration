@@ -1,0 +1,13 @@
+# Requirements for the Database Automation scripts
+# Install everything with:  pip install -r requirements.txt
+#
+# Note: sqlite3 is part of the Python standard library and needs no
+# install. MySQL/PostgreSQL modes also require the mysqldump/mysql and
+# pg_dump/psql command-line client tools for backup_database.py and
+# restore_database.py — see README.md for OS-level install instructions.
+
+pymysql>=1.1
+psycopg2-binary>=2.9
+pyarrow>=17.0
+alembic>=1.13
+sqlalchemy>=2.0
