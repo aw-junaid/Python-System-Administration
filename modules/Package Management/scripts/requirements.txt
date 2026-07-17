@@ -1,0 +1,13 @@
+# These scripts rely only on the Python standard library
+# (subprocess, venv, json, argparse, pathlib, shutil) and on
+# `pip` itself, which ships with every standard Python install.
+#
+# No third-party packages are required to RUN these scripts.
+#
+# Optional external tools (only needed if you use manage_with_poetry.py):
+#   poetry        # https://python-poetry.org/
+#   pipenv        # https://pipenv.pypa.io/
+#
+# Install one of the above yourself first, e.g.:
+#   pip install poetry
+#   pip install pipenv
