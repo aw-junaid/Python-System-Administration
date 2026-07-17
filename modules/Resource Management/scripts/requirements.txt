@@ -1,0 +1,22 @@
+# requirements.txt
+# ------------------------------------------------------------
+# External dependencies for the Resource Management scripts.
+#
+# Scripts using ONLY Python's standard library (resource, subprocess,
+# os, time) need NOTHING installed:
+#   - set_cpu_limit.py         (Linux/macOS only, via 'resource' module)
+#   - limit_memory_usage.py    (Linux/macOS only, via 'resource' module)
+#   - limit_disk_usage.py
+#   - limit_execution_time.py
+#   - restart_failed_process.py
+#
+# Scripts that need the 'psutil' package (cross-platform process/system info):
+#   - set_process_priority.py
+#   - monitor_system_resources.py
+#   - detect_resource_exhaustion.py
+#
+# Install with:
+#   pip install -r requirements.txt
+# ------------------------------------------------------------
+
+psutil>=5.9.0
