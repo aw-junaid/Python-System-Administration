@@ -58229,3 +58229,345 @@ TypeError: unsupported operand type(s) for +=: 'float' and 'decimal.Decimal'
 - **`ijson`'s `items()` path syntax requires knowing your JSON's shape in advance** — `"item"` matches items of the top-level array; a differently-shaped document (an object with a nested array under a key, e.g. `{"records": [...]}`) needs a different path (`"records.item"`), and getting this wrong produces zero iterations with no error, not a crash — easy to mistake for "the file is empty."
 - **`tracemalloc`'s peak-memory figure measures Python-level allocations only** — it does not account for OS-level file-buffer caching or memory used by C extensions like `ijson`'s underlying C parser (`ijson` can be built with a fast `yajl2_c` backend); treat the printed KB figure as a useful relative comparison between runs, not an absolute measurement of total process RSS.
 
+
+## Glossary
+
+
+**ACL (Access Control List)** — A list of permissions attached to a file
+or resource, specifying which users or groups can read, write, or
+execute it, beyond the basic owner/group/other model.
+
+**Ansible** — An agentless automation tool that configures systems and
+deploys applications using declarative YAML playbooks over SSH.
+
+**API (Application Programming Interface)** — A defined way for one
+program to request data or actions from another, typically over HTTP in
+the scripts throughout this book.
+
+**Argument Parser (argparse)** — Python's standard-library tool for
+turning command-line flags and positional arguments into validated,
+typed values, replacing manual `sys.argv` handling.
+
+**Async / Asynchronous Programming** — A concurrency model (Python's
+`asyncio`) that lets a single thread juggle many I/O-bound operations —
+network calls, file reads — without blocking on any one of them.
+
+**Automation** — Any script or process that performs a task without a
+human repeating manual steps each time it runs.
+
+**Base64** — A binary-to-text encoding scheme that represents binary data
+using only printable ASCII characters, commonly used to embed files or
+keys inside text-based formats like JSON.
+
+**Bash** — The default command-line shell on most Linux distributions
+and macOS, used to run commands and shell scripts.
+
+**Blocking Call** — An operation that halts program execution until it
+completes, such as waiting on user input or a network response.
+
+**Boto3** — The official Python SDK for interacting with Amazon Web
+Services (AWS) programmatically.
+
+**Buffering** — The practice of holding output in memory before writing
+it out, done for performance reasons; can delay when printed text
+actually appears, especially when output is piped or redirected.
+
+**CA (Certificate Authority)** — An entity that issues and signs digital
+certificates, vouching for the identity tied to a public key.
+
+**Cache / Caching** — Storing the result of an expensive operation so a
+future request can reuse it instead of recomputing it from scratch.
+
+**Celery** — A distributed task queue for Python used to run background
+jobs asynchronously, often paired with Redis or RabbitMQ.
+
+**Checksum** — A short, fixed-size value (such as an MD5 or SHA-256
+hash) computed from a file's contents, used to verify the file hasn't
+changed or been corrupted.
+
+**CI/CD (Continuous Integration / Continuous Deployment)** — Practices
+and tooling that automatically test and ship code changes, often
+triggered on every commit or pull request.
+
+**CLI (Command-Line Interface)** — A text-based way of interacting with
+a program, as opposed to a graphical interface.
+
+**Container** — A lightweight, isolated unit of software (via Docker or
+similar) that packages an application with its dependencies, without
+the overhead of a full virtual machine.
+
+**Context Manager** — A Python construct (used via the `with` statement)
+that guarantees setup and cleanup code runs, even if an error occurs —
+commonly used for files, locks, and connections.
+
+**Cron** — A time-based job scheduler on Unix-like systems used to run
+scripts automatically at fixed intervals.
+
+**Cross-Platform** — Software or a script designed to run correctly on
+multiple operating systems (typically Linux, macOS, and Windows) without
+modification.
+
+**CSR (Certificate Signing Request)** — A block of data submitted to a
+Certificate Authority to request a signed certificate.
+
+**Daemon** — A background process that runs continuously, typically
+started at boot and not tied to a specific user session.
+
+**Decorator** — A Python function that wraps another function to add
+behavior — such as retry logic or logging — without modifying the
+original function's code.
+
+**Differential Backup** — A backup containing all changes made since the
+last *full* backup (as opposed to incremental, see below).
+
+**Docker** — A platform for building, running, and distributing
+applications inside containers.
+
+**Docker Compose** — A tool for defining and running multi-container
+Docker applications from a single YAML configuration file.
+
+**Dry Run** — Executing a script's logic without performing its real,
+potentially destructive actions — used to preview what a script would
+do before committing to it.
+
+**Encryption / Decryption** — The process of transforming data into an
+unreadable form using a key (encryption), and reversing that process to
+recover the original data (decryption).
+
+**Environment Variable** — A named value held outside a program itself,
+in the shell or OS environment, commonly used for configuration and
+secrets.
+
+**EOF (End of File)** — A signal indicating no more data remains to be
+read from a file or input stream.
+
+**Exception Handling** — Catching and responding to runtime errors using
+`try`/`except` blocks instead of letting a script crash outright.
+
+**Exit Code** — A numeric value a program returns when it finishes,
+where `0` conventionally means success and any nonzero value signals an
+error — used heavily in scripting to detect failure automatically.
+
+**Exponential Backoff** — A retry strategy where the wait time between
+attempts increases exponentially after each failure, reducing load on a
+struggling system.
+
+**FTP / SFTP (File Transfer Protocol / SSH File Transfer Protocol)** —
+Protocols for transferring files between systems over a network; SFTP
+adds encryption via SSH.
+
+**Git** — A distributed version control system used to track changes to
+code, and the basis for platforms like GitHub and GitLab.
+
+**GPG (GNU Privacy Guard)** — An open-source implementation of the
+OpenPGP standard, used for encrypting and signing files and messages.
+
+**Helm** — A package manager for Kubernetes that bundles related
+resources into reusable, versioned "charts."
+
+**HTTP Status Code** — A three-digit code returned by a web server
+indicating the result of a request (e.g., `200 OK`, `404 Not Found`,
+`500 Internal Server Error`).
+
+**Idempotent** — Describes an operation that produces the same result no
+matter how many times it's run — a core property of reliable automation
+scripts.
+
+**Incremental Backup** — A backup containing only the changes made since
+the *previous* backup, whether full or incremental.
+
+**JSON (JavaScript Object Notation)** — A lightweight, widely used
+text format for structured data, native to Python via the `json` module.
+
+**Kubernetes (K8s)** — An open-source system for automating deployment,
+scaling, and management of containerized applications across a cluster
+of machines.
+
+**Let's Encrypt** — A free, automated Certificate Authority that issues
+TLS certificates via the ACME protocol.
+
+**Load Balancer** — A component that distributes incoming network
+traffic across multiple servers to avoid overloading any single one.
+
+**Log Rotation** — The practice of archiving, compressing, or deleting
+old log files on a schedule so logs don't grow without bound.
+
+**Logging Level** — A severity ranking (`DEBUG`, `INFO`, `WARNING`,
+`ERROR`, `CRITICAL`) used to filter and prioritize log messages.
+
+**LXC / LXD** — Lightweight Linux container technologies that run
+full-system containers, positioned between a chroot and a full virtual
+machine.
+
+**Multiprocessing** — Running code across multiple separate processes to
+achieve true parallelism, sidestepping Python's Global Interpreter Lock.
+
+**Multithreading (Threading)** — Running multiple threads within a single
+process, well-suited to I/O-bound tasks rather than CPU-heavy work in
+Python.
+
+**OAuth** — An authorization framework that lets an application access a
+resource on a user's behalf without handling their raw password.
+
+**ORM (Object-Relational Mapping)** — A technique that lets code interact
+with a database using objects and methods instead of writing raw SQL.
+
+**Package Manager** — A tool for installing, updating, and removing
+software packages, such as `pip` for Python or `apt`/`brew` for the OS.
+
+**Payload** — The actual data being transmitted or processed, as opposed
+to the metadata (headers, envelope) wrapped around it.
+
+**Pickling (Serialization)** — Python's built-in mechanism for converting
+objects into a byte stream that can be saved or transmitted, and later
+reconstructed.
+
+**Pipe** — A shell mechanism (`|`) connecting the standard output of one
+program directly to the standard input of another.
+
+**PKI (Public Key Infrastructure)** — The overall system of certificates,
+keys, and authorities used to manage trust and encryption at scale.
+
+**Port** — A numbered network endpoint (0–65535) that identifies a
+specific service running on a machine, such as port 22 for SSH.
+
+**Process Priority (Nice Value)** — A numeric hint to the OS scheduler
+indicating how much CPU time a process should be favored or deprioritized
+relative to others.
+
+**Race Condition** — A bug that occurs when the outcome of a program
+depends on the unpredictable timing of concurrent operations.
+
+**Rate Limiting** — Restricting how many requests or operations are
+allowed within a given time window, often to avoid overwhelming an API
+or service.
+
+**Regex (Regular Expression)** — A pattern-matching syntax used to search,
+validate, or extract text.
+
+**REST (Representational State Transfer)** — An architectural style for
+web APIs built around standard HTTP methods (GET, POST, PUT, DELETE).
+
+**Retry Logic** — Code that automatically re-attempts a failed operation,
+often combined with a limit on attempts and a backoff strategy.
+
+**Rsync** — A fast, widely used file-synchronization tool that transfers
+only the parts of files that have changed.
+
+**Schema** — A formal definition of the structure, types, and
+constraints expected in a piece of data, such as a database table or a
+JSON document.
+
+**Shell** — The command-line program (such as `bash`, `zsh`, or
+PowerShell) that interprets typed commands and runs programs.
+
+**Snapshot** — A point-in-time copy of a system's state — a virtual
+machine, disk volume, or database — that can be restored later.
+
+**SMTP (Simple Mail Transfer Protocol)** — The standard protocol used to
+send email between mail servers.
+
+**Socket** — A low-level endpoint for sending and receiving data over a
+network connection.
+
+**SSH (Secure Shell)** — An encrypted protocol used to remotely log in to
+and execute commands on another machine.
+
+**SSH Key Pair** — A public and private key used together to
+authenticate to a remote system without a password, with the private key
+kept secret and the public key shared with the server.
+
+**stdin / stdout / stderr** — The three default I/O streams every
+process starts with: standard input, standard output, and standard
+error (see Chapter 1 for a full explanation).
+
+**Subprocess** — A separate process launched and managed from within a
+running program, typically via Python's `subprocess` module.
+
+**Symlink (Symbolic Link)** — A file that acts as a pointer to another
+file or directory, rather than containing data itself.
+
+**systemd** — The init system and service manager used by most modern
+Linux distributions to start, stop, and monitor services.
+
+**Terraform** — An infrastructure-as-code tool that provisions and
+manages cloud resources through declarative configuration files.
+
+**Thread Safety** — A property of code that behaves correctly when
+accessed by multiple threads at the same time, without corrupting shared
+data.
+
+**Timeout** — A limit on how long an operation is allowed to run before
+it's forcibly stopped or treated as failed.
+
+**TLS/SSL Certificate** — A digital certificate used to establish an
+encrypted connection and verify the identity of a server.
+
+**Token** — A string used to authenticate or authorize access to an API
+or service, often issued after a login or key exchange.
+
+**TOML (Tom's Obvious, Minimal Language)** — A configuration file format
+designed to be easy for humans to read and unambiguous for machines to
+parse.
+
+**Vagrant** — A tool for building and managing portable virtual machine
+environments from a single configuration file.
+
+**venv (Virtual Environment)** — An isolated Python environment with its
+own installed packages, keeping project dependencies separate from the
+system-wide Python installation.
+
+**Virtual Machine (VM)** — A fully emulated computer system running on
+top of a host machine, isolated at the hardware level, unlike a
+lightweight container.
+
+**Webhook** — A user-defined HTTP callback triggered automatically when
+a specific event occurs in another system.
+
+**WebSocket** — A network protocol providing a persistent, two-way
+connection between client and server, used for real-time data instead
+of repeated HTTP requests.
+
+**WHOIS** — A protocol and lookup service used to query registration
+details (owner, registrar, expiry) for a domain name or IP address.
+
+**XML (eXtensible Markup Language)** — A structured, tag-based text
+format for representing data, older and more verbose than JSON but still
+common in enterprise and legacy systems.
+
+**XSLT (eXtensible Stylesheet Language Transformations)** — A language
+for transforming XML documents into another format, such as HTML or a
+different XML structure.
+
+**YAML (YAML Ain't Markup Language)** — A human-readable data
+serialization format commonly used for configuration files.
+
+
+## A Closing Note
+
+You've reached the end of *Python Automation* — 24 chapters, 359 scripts,
+and hopefully a working, well-tested toolkit you can reach for the next
+time something needs to run without you standing over it.
+
+No book like this is ever really "finished." Tools change, APIs get
+deprecated, and the sysadmin's job keeps shifting under everyone's feet.
+If you find a script that's broken on a newer Python version, a
+platform quirk that wasn't covered, or a better approach to something —
+that's worth writing down and fixing.
+
+**Where to go from here:**
+
+- All 359 scripts in this book are available in the companion repository,
+  kept in sync with the numbering used throughout — clone it, run the
+  scripts directly, and adapt them to your own environment.
+- Start small. Pick one script from a chapter that maps to a task you
+  already do by hand, and automate just that one thing this week.
+- Revisit Chapter 21 (Automation Best Practices) once you've written a
+  handful of your own scripts — it lands differently after you've felt
+  the pain it's addressing firsthand.
+
+**Thank you** for reading this far — technical books this dense don't
+get finished by many people who buy them, and if you made it here, some
+part of this actually stuck.
+
+---
