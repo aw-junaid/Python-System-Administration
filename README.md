@@ -93,20 +93,20 @@ Every script is designed to be practical, well-documented, and production-orient
 6. [**Write to Standard Output (stdout):**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20&%20Output%20Handling/scripts/write_stdout.py) Display information to the user via the terminal.
 7. [**Write to Standard Error (stderr):**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/write_stderr.py) Output error messages distinctly from standard output.
 8. [**Read Multiline Input:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_multiline_input.py) Capture text input spanning multiple lines until an EOF marker.
-9. **Handle Command-Line Arguments:** Access basic script parameters passed via `sys.argv`.
-10. **Parse Command-Line Options using argparse:** Build complex, user-friendly command-line interfaces.
-11. **Parse Command-Line Options using click:** Create beautiful CLI tools with composable commands.
-12. **Parse Environment Variables:** Retrieve system and user environment variables for configuration.
-13. **Interactive Command-Line Menus:** Create selectable terminal menus using libraries like `simple-term-menu`.
-14. **Display Progress Bars:** Visualize iteration progress with `tqdm` or `progress`.
-15. **Colored Terminal Output:** Add semantic coloring to terminal text using `colorama` or `rich`.
-16. **Pretty-Print Structured Data:** Format nested dicts/lists for readability using `pprint`.
-17. **Read JSON Input:** Deserialize JSON streams or files into Python dictionaries.
-18. **Read CSV Input:** Parse comma-separated files using the `csv` module or `pandas`.
-19. **Read YAML Input:** Load hierarchical configuration data from `.yaml` files.
-20. **Read XML Input:** Parse structured XML data using `ElementTree` or `lxml`.
-21. **Read TOML Input:** Load configuration from TOML files, common in Python packaging.
-22. **Read from Password-Protected Files:** Open encrypted or zip-protected files by providing credentials.
+9. [**Handle Command-Line Arguments:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/handle_cli_arguments.py) Access basic script parameters passed via `sys.argv`.
+10. [**Parse Command-Line Options using argparse:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/argparse_options.py) Build complex, user-friendly command-line interfaces.
+11. [**Parse Command-Line Options using click:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/click_options.py) Create beautiful CLI tools with composable commands.
+12. [**Parse Environment Variables:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/parse_env_variables.py) Retrieve system and user environment variables for configuration.
+13. [**Interactive Command-Line Menus:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/interactive_menu.py) Create selectable terminal menus using libraries like `simple-term-menu`.
+14. [**Display Progress Bars:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/progress_bar.py) Visualize iteration progress with `tqdm` or `progress`.
+15. [**Colored Terminal Output:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/colored_output.py) Add semantic coloring to terminal text using `colorama` or `rich`.
+16. [**Pretty-Print Structured Data:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/pretty_print_data.py) Format nested dicts/lists for readability using `pprint`.
+17. [**Read JSON Input:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_json_input.py) Deserialize JSON streams or files into Python dictionaries.
+18. [**Read CSV Input:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_csv_input.py) Parse comma-separated files using the `csv` module or `pandas`.
+19. [**Read YAML Input:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_xml_input.py) Load hierarchical configuration data from `.yaml` files.
+20. [**Read XML Input:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_xml_input.py) Parse structured XML data using `ElementTree` or `lxml`.
+21. [**Read TOML Input:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_toml_input.py) Load configuration from TOML files, common in Python packaging.
+22. [**Read from Password-Protected Files:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Input%20%26%20Output%20Handling/scripts/read_password_protected_file.py) Open encrypted or zip-protected files by providing credentials.
 
 #### System Commands & Process Management
 23. **Execute External System Commands:** Run any system binary using the `subprocess` module.
