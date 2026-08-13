@@ -50,6 +50,7 @@
 # Support the Project
 
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/awjunaid)
+[![Buy the Book](https://img.shields.io/badge/📖%20Buy%20the%20Book-ffdd00?style=for-the-badge&logo=bookstack&logoColor=black)](https://buymeacoffee.com/awjunaid/e/558147)
 
 ## Overview
 
@@ -302,16 +303,16 @@ Every script is designed to be practical, well-documented, and production-orient
 193. [**Database Connection Pooling:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Database%20Automation/scripts/connection_pooling.py) Manage high-concurrency DB connections gracefully.
 
 #### Backup & Synchronization
-194. **Create Backups:** Full snapshots of specific datasets.
-195. **Incremental Backups:** Copy only data changed since the last run.
-196. **Differential Backups:** Backup data modified since the last full backup.
-197. **Synchronize Directories:** Bi-directional sync ensuring two dirs match.
-198. **Mirror Folders:** One-way replication of source to destination.
-199. **Verify Backup Integrity:** Run hash checks on backup archives.
-200. **Compress Backups:** Tar.gz or zip backup directories for storage.
-201. **Encrypt Backups:** Secure backup payloads with a symmetric key.
-202. **Automatic Backup Rotation:** Delete backups older than a retention policy.
-203. **Remote Backup via rclone/rsync:** Push encrypted backups to cloud buckets.
+194. [**Create Backups:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/backup_create.py) Full snapshots of specific datasets.
+195. [**Incremental Backups:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/backup_incremental.py) Copy only data changed since the last run.
+196. [**Differential Backups:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/backup_differential.py) Backup data modified since the last full backup.
+197. [**Synchronize Directories:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/sync_directories.py) Bi-directional sync ensuring two dirs match.
+198. [**Mirror Folders:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/mirror_folders.py) One-way replication of source to destination.
+199. [**Verify Backup Integrity:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/verify_backup.py) Run hash checks on backup archives.
+200. [**Compress Backups:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/compress_backup.py) Tar.gz or zip backup directories for storage.
+201. [**Encrypt Backups:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/encrypt_backup.py) Secure backup payloads with a symmetric key.
+202. [**Automatic Backup Rotation:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/backup_rotation.py) Delete backups older than a retention policy.
+203. [**Remote Backup via rclone/rsync:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Backup%20%26%20Synchronization/scripts/remote_backup.py) Push encrypted backups to cloud buckets.
 
 #### Network Administration
 204. [**Ping Hosts:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Network%20Administration/scripts/ping_hosts.py) Send ICMP echo requests to verify L3 connectivity.
@@ -330,19 +331,19 @@ Every script is designed to be practical, well-documented, and production-orient
 217. [**Configure Firewall Rules:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/Network%20Administration/scripts/configure_firewall.py) Manipulate iptables or Windows Firewall entries via subprocess.
 
 #### System Information
-218. **Get CPU Information:** Physical cores, logical threads, and current frequency.
-219. **Get Memory Information:** Total, available, and used RAM statistics.
-220. **Get Disk Information:** Partition sizes, mount points, and filesystem types.
-221. **Get Network Interfaces:** MAC addresses and IP configurations per NIC.
-222. **Get Installed Software:** Query RPM/dpkg package database.
-223. **Get Environment Variables:** Read global and user-session environment paths.
-224. **Get BIOS Information:** Retrieve serial numbers and hardware vendor data.
-225. **Get Motherboard Information:** Access baseboard specifics.
-226. **Get Operating System Version:** Specific release names and build numbers.
-227. **Get Kernel Version:** Exact `uname -r` output.
-228. **Get Boot Time:** Precision timestamp of system power-on.
-229. **Get Logged-in Users:** Enumerate current active user sessions.
-230. **Get GPU Information:** Detect NVIDIA/AMD GPU presence and VRAM usage.
+218. [**Get CPU Information:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/cpu_info.py) Physical cores, logical threads, and current frequency.
+219. [**Get Memory Information:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/memory_info.py) Total, available, and used RAM statistics.
+220. [**Get Disk Information:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/disk_info.py) Partition sizes, mount points, and filesystem types.
+221. [**Get Network Interfaces:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/network_interfaces.py) MAC addresses and IP configurations per NIC.
+222. [**Get Installed Software:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/installed_software.py) Query RPM/dpkg package database.
+223. [**Get Environment Variables:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/environment_variables.py) Read global and user-session environment paths.
+224. [**Get BIOS Information:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/bios_info.py) Retrieve serial numbers and hardware vendor data.
+225. [**Get Motherboard Information:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/motherboard_info.py) Access baseboard specifics.
+226. [**Get Operating System Version:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/os_version.py) Specific release names and build numbers.
+227. [**Get Kernel Version:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/kernel_version.py) Exact `uname -r` output.
+228. [**Get Boot Time:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/boot_time.py) Precision timestamp of system power-on.
+229. [**Get Logged-in Users:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/logged_in_users.py) Enumerate current active user sessions.
+230. [**Get GPU Information:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/System%20Information/scripts/gpu_info.py) Detect NVIDIA/AMD GPU presence and VRAM usage.
 
 #### User & Permission Management
 231. [**Create Users:**](https://github.com/aw-junaid/Python-System-Administration/blob/main/modules/User%20%26%20Permission%20Management/scripts/create_user.py) Wrappers around `useradd` or Windows NetUser.
@@ -521,7 +522,9 @@ Each module includes standalone, well-documented scripts, a `README.md` explaini
 If this repository has helped you, consider supporting its continued development:
  
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/awjunaid)
- 
+
+
+
 Other ways to support:
 - ⭐ Star this repository
 - 🐛 Report bugs or suggest features via [Issues](https://github.com/aw-junaid/Python-System-Administration/issues)
