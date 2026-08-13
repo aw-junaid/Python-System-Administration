@@ -1,12 +1,5 @@
 # Backup & Synchronization — Python Automation Scripts
 
-This folder contains **10 standalone Python scripts**, each covering one
-backup/sync topic. Every script is independent — you only need the ones
-you actually want to use, and each can be run directly with `python3`.
-
-These scripts are written to accompany the module here:
-**https://github.com/aw-junaid/Python-System-Administration/tree/main/modules/Backup%20&%20Synchronization/scripts**
-
 
 > ⚠️ **Caution before you install/run anything from that repository (or this folder):**
 > - **Read the code before running it**, especially `mirror_folders.py` (deletes files in the destination) and `rotate_backups.py` (deletes old backups). Both scripts support `--dry-run` — always test with `--dry-run` first on real data.
