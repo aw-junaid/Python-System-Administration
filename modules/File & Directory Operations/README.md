@@ -1,16 +1,4 @@
-# File & Directory Operations — Python Automation Scripts
-
-This folder contains **33 standalone Python scripts**, each automating a single, specific file or directory operation (listing, creating, deleting, copying, moving, archiving, hashing, encrypting, organizing, and more).
-
-Every script:
-- Is completely **independent** — you only need the one file for the task you want.
-- Can be run directly from the command line.
-- Uses `argparse`, so running it with `-h` shows help and usage.
-- Prints clear success/error messages so you always know what happened.
-
-> **Repository:** https://github.com/aw-junaid/Python-System-Administration/tree/main/modules/File%20%26%20Directory%20Operations/scripts
-
----
+# File & Directory Operations
 
 ## ⚠️ Important Cautions Before You Start
 
