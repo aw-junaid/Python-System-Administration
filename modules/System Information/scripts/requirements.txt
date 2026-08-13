@@ -1,0 +1,23 @@
+# Requirements for the System Information scripts module
+# https://github.com/aw-junaid/Python-System-Administration
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# Notes:
+# - psutil covers: cpu_info.py, memory_info.py, disk_info.py,
+#   network_interfaces.py, boot_time.py, logged_in_users.py
+# - distro is used (optionally) by os_version.py for accurate Linux
+#   distribution names. If it's missing, the script falls back to
+#   reading /etc/os-release directly, so it still works without it.
+# - wmi is only needed by bios_info.py and motherboard_info.py, and
+#   only on Windows. pip will skip it automatically on Linux/macOS.
+# - installed_software.py, environment_variables.py, kernel_version.py,
+#   and gpu_info.py use only the Python standard library and/or
+#   OS-level command-line tools (dpkg/rpm, nvidia-smi, rocm-smi,
+#   lspci) that are NOT installed via pip - they must already exist
+#   on the host OS.
+
+psutil>=5.9.0
+distro>=1.9.0; sys_platform == "linux"
+wmi>=1.5.1; sys_platform == "win32"
