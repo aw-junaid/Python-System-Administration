@@ -50,7 +50,7 @@
 # Support the Project
 
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/awjunaid)
-[![Buy the Book](https://img.shields.io/badge/📖%20Buy%20the%20Book-ffdd00?style=for-the-badge&logo=bookstack&logoColor=black)](https://buymeacoffee.com/awjunaid/e/558147)
+[![Buy the Book](https://img.shields.io/badge/📖%20Buy%20the%20Book-1E88E5?style=for-the-badge&logo=bookstack&logoColor=white)](https://buymeacoffee.com/awjunaid/e/558147)
 
 ## Overview
 
